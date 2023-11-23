@@ -81,6 +81,67 @@ function setInterpolationImageFine2(i) {
 
 ////
 
+//////
+
+var INTERP_BASE_HIGH_0 = "./static/ablation/fine-tuning/grapes_0";
+var NUM_INTERP_FRAMES_HIGH_0 = 100;
+
+var interp_images_HIGH_0 = [];
+function preloadInterpolationImagesHigh0() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_HIGH_0; i++) {
+    var path = INTERP_BASE_HIGH_0 + '/' + String(i).padStart(4, '0') + '.png';
+    interp_images_HIGH_0[i] = new Image();
+    interp_images_HIGH_0[i].src = path;
+  }
+}
+
+function setInterpolationImageHigh0(i) {
+  var image = interp_images_HIGH_0[i];
+  image.ondragstart = function() { return false; };
+  image.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper-high0').empty().append(image);
+}
+
+var INTERP_BASE_HIGH_1 = "./static/ablation/fine-tuning/grapes_0";
+var NUM_INTERP_FRAMES_HIGH_1 = 100;
+
+var interp_images_HIGH_1 = [];
+function preloadInterpolationImagesHigh1() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_HIGH_1; i++) {
+    var path = INTERP_BASE_HIGH_1 + '/' + String(i).padStart(4, '0') + '.png';
+    interp_images_HIGH_1[i] = new Image();
+    interp_images_HIGH_1[i].src = path;
+  }
+}
+
+function setInterpolationImageHigh1(i) {
+  var image = interp_images_HIGH_1[i];
+  image.ondragstart = function() { return false; };
+  image.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper-high1').empty().append(image);
+}
+
+var INTERP_BASE_HIGH_2 = "./static/ablation/fine-tuning/grapes_0";
+var NUM_INTERP_FRAMES_HIGH_2 = 100;
+
+var interp_images_HIGH_2 = [];
+function preloadInterpolationImagesHigh2() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_HIGH_2; i++) {
+    var path = INTERP_BASE_HIGH_2 + '/' + String(i).padStart(4, '0') + '.png';
+    interp_images_HIGH_2[i] = new Image();
+    interp_images_HIGH_2[i].src = path;
+  }
+}
+
+function setInterpolationImageHigh2(i) {
+  var image = interp_images_HIGH_2[i];
+  image.ondragstart = function() { return false; };
+  image.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper-high2').empty().append(image);
+}
+
+////
+
 
 $(document).ready(function() {
     // Check for click events on the navbar burger icon
@@ -135,6 +196,30 @@ $(document).ready(function() {
     // });
     // setInterpolationImage(0);
     // $('#interpolation-slider').prop('max', NUM_INTERP_FRAMES - 1);
+
+    preloadInterpolationImagesHigh0();
+
+    $('#interpolation-slider-high0').on('input', function(event) {
+      setInterpolationImageHigh0(this.value);
+    });
+    setInterpolationImageHigh0(0);
+    $('#interpolation-slider-high0').prop('max', NUM_INTERP_FRAMES_HIGH_0 - 1);
+
+    preloadInterpolationImagesHigh1();
+
+    $('#interpolation-slider-high1').on('input', function(event) {
+      setInterpolationImageHigh1(this.value);
+    });
+    setInterpolationImageHigh1(0);
+    $('#interpolation-slider-high1').prop('max', NUM_INTERP_FRAMES_HIGH_1 - 1);
+
+    preloadInterpolationImagesHigh2();
+
+    $('#interpolation-slider-high2').on('input', function(event) {
+      setInterpolationImageHigh2(this.value);
+    });
+    setInterpolationImageHigh2(0);
+    $('#interpolation-slider-high2').prop('max', NUM_INTERP_FRAMES_HIGH_2 - 1);
 
     preloadInterpolationImagesFine0();
 

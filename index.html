@@ -305,7 +305,7 @@
           </p>
         </div>
         <div class="content has-text-centered">
-          <video id="replay-video"
+          <!-- <video id="replay-video"
                  controls
                  muted
                  preload
@@ -313,7 +313,7 @@
                  width="100%">
             <source src="./static/videos/grapes_0.mp4"
                     type="video/mp4">
-          </video>
+          </video> -->
           <video id="replay-video"
                  controls
                  muted
@@ -398,7 +398,7 @@
         </div>
         <!--/ Re-rendering. -->
 
-        <!-- <h3 class="title is-4">Ablation of high-passing 2D prior guidance</h3>
+        <h3 class="title is-4">Ablation of high-passing 2D prior guidance</h3>
         <div class="content has-text-justified">
           <p>
             We can also animate the scene by interpolating the deformation latent codes of two input
@@ -408,55 +408,55 @@
         </div>
         <div class="columns is-vcentered interpolation-panel">
           <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
+            <img src="./static/ablation/fine-tuning/grapes_0.png"
                  class="interpolation-image"
                  alt="Interpolate start reference image."/>
             <p>Reference</p>
           </div>
           <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
+            <div id="interpolation-image-wrapper-high0">
               Loading...
             </div>
             <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
+                   id="interpolation-slider-high0"
                    step="1" min="0" max="100" value="0" type="range">
           </div>
         </div>
         <br/>
         <div class="columns is-vcentered interpolation-panel">
           <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
+            <img src="./static/ablation/fine-tuning/grapes_0.png"
                  class="interpolation-image"
                  alt="Interpolate start reference image."/>
             <p>Reference</p>
           </div>
           <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
+            <div id="interpolation-image-wrapper-high1">
               Loading...
             </div>
             <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
+                   id="interpolation-slider-high1"
                    step="1" min="0" max="100" value="0" type="range">
           </div>
         </div>
         <br/>
         <div class="columns is-vcentered interpolation-panel">
           <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
+            <img src="./static/ablation/fine-tuning/grapes_0.png"
                  class="interpolation-image"
                  alt="Interpolate start reference image."/>
             <p>Reference</p>
           </div>
           <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
+            <div id="interpolation-image-wrapper-high2">
               Loading...
             </div>
             <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
+                   id="interpolation-slider-high2"
                    step="1" min="0" max="100" value="0" type="range">
           </div>
         </div>
-        <br/> -->
+        <br/>
 
         <h3 class="title is-4">Ablation of fine-tuning 2D prior</h3>
         <div class="content has-text-justified">
