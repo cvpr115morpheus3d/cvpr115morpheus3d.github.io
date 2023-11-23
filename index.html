@@ -242,16 +242,17 @@
         </div>
       </div>
     </div> -->
-    <div class="columns is-centered has-text-centered">
+
+    <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-      <!-- <div class="columns is-centered"> -->
         <h2 class="title is-3">Generated Textured Meshes</h2>
         <video id="matting-video" controls playsinline height="100%">
           <source src="./static/videos/matting.mp4"
                   type="video/mp4">
         </video>
       </div>
-    </div>
+    </div> -->
+    
     <!--/ Paper video. -->
   </div>
 </section>
@@ -441,19 +442,11 @@
             frame.
           </p>
         </div>
-        <img src="./static/images/tab1.png"
-                 alt="Quantitative comparison in Table 1 of the submitted main manuscript."
-                 width="100%"/>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <img src="./static/images/fig8.png"
-                  alt="Ablation of high-passing 2D prior guidance in Figure 8 of the submitted main manuscript."
+        <div class="content has-text-centered">
+          <img src="./static/images/tab1.png"
+                  alt="Quantitative comparison in Table 1 of the submitted main manuscript."
                   width="100%"/>
+        </div>
         <div class="content has-text-justified">
           <p>
             We can also animate the scene by interpolating the deformation latent codes of two input
@@ -461,9 +454,11 @@
             frame.
           </p>
         </div>
-        <img src="./static/images/fig12.png"
-                  alt="Ablation of fine-tuning 2D prior in Figure 12 of the submitted main manuscript."
-                  width="100%"/>
+        <div class="content has-text-centered">
+          <img src="./static/images/fig8.png"
+                    alt="Ablation of high-passing 2D prior guidance in Figure 8 of the submitted main manuscript."
+                    width="100%"/>
+        </div>
         <div class="content has-text-justified">
           <p>
             We can also animate the scene by interpolating the deformation latent codes of two input
@@ -471,9 +466,23 @@
             frame.
           </p>
         </div>
-        <img src="./static/images/figf2.png"
+        <div class="content has-text-centered">
+          <img src="./static/images/fig12.png"
+                    alt="Ablation of fine-tuning 2D prior in Figure 12 of the submitted main manuscript."
+                    width="100%"/>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            We can also animate the scene by interpolating the deformation latent codes of two input
+            frames. Use the slider here to linearly interpolate between the left frame and the right
+            frame.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/figf2.png"
                   alt="Quantitative comparison of training time in Figure F2 of the supplementary material."
                   width="50%"/>
+        </div>
         
         <h2 class="title is-3">More Generated Results of Morpheus3D</h2>
         <video id="replay-video"
