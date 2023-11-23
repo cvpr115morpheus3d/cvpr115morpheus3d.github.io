@@ -1,23 +1,85 @@
 window.HELP_IMPROVE_VIDEOJS = false;
 
-var INTERP_BASE = "./static/interpolation/stacked";
-var NUM_INTERP_FRAMES = 240;
+// var INTERP_BASE = "./static/interpolation/stacked";
+// var NUM_INTERP_FRAMES = 240;
 
-var interp_images = [];
-function preloadInterpolationImages() {
-  for (var i = 0; i < NUM_INTERP_FRAMES; i++) {
-    var path = INTERP_BASE + '/' + String(i).padStart(6, '0') + '.jpg';
-    interp_images[i] = new Image();
-    interp_images[i].src = path;
+// var interp_images = [];
+// function preloadInterpolationImages() {
+//   for (var i = 0; i < NUM_INTERP_FRAMES; i++) {
+//     var path = INTERP_BASE + '/' + String(i).padStart(6, '0') + '.jpg';
+//     interp_images[i] = new Image();
+//     interp_images[i].src = path;
+//   }
+// }
+
+// function setInterpolationImage(i) {
+//   var image = interp_images[i];
+//   image.ondragstart = function() { return false; };
+//   image.oncontextmenu = function() { return false; };
+//   $('#interpolation-image-wrapper').empty().append(image);
+// }
+
+
+//////
+
+var INTERP_BASE_FINE_0 = "./static/ablation/fine-tuning/grapes_0";
+var NUM_INTERP_FRAMES_FINE_0 = 100;
+
+var interp_images_FINE_0 = [];
+function preloadInterpolationImagesFine0() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_FINE_0; i++) {
+    var path = INTERP_BASE_FINE_0 + '/' + String(i).padStart(4, '0') + '.png';
+    interp_images_FINE_0[i] = new Image();
+    interp_images_FINE_0[i].src = path;
   }
 }
 
-function setInterpolationImage(i) {
-  var image = interp_images[i];
+function setInterpolationImageFine0(i) {
+  var image = interp_images_FINE_0[i];
   image.ondragstart = function() { return false; };
   image.oncontextmenu = function() { return false; };
   $('#interpolation-image-wrapper').empty().append(image);
 }
+
+var INTERP_BASE_FINE_1 = "./static/ablation/fine-tuning/grapes_0";
+var NUM_INTERP_FRAMES_FINE_1 = 100;
+
+var interp_images_FINE_1 = [];
+function preloadInterpolationImagesFine1() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_FINE_1; i++) {
+    var path = INTERP_BASE_FINE_1 + '/' + String(i).padStart(4, '0') + '.png';
+    interp_images_FINE_1[i] = new Image();
+    interp_images_FINE_1[i].src = path;
+  }
+}
+
+function setInterpolationImageFine1(i) {
+  var image = interp_images_FINE_1[i];
+  image.ondragstart = function() { return false; };
+  image.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper').empty().append(image);
+}
+
+var INTERP_BASE_FINE_2 = "./static/ablation/fine-tuning/grapes_0";
+var NUM_INTERP_FRAMES_FINE_2 = 100;
+
+var interp_images_FINE_2 = [];
+function preloadInterpolationImagesFine2() {
+  for (var i = 0; i < NUM_INTERP_FRAMES_FINE_2; i++) {
+    var path = INTERP_BASE_FINE_2 + '/' + String(i).padStart(4, '0') + '.png';
+    interp_images_FINE_2[i] = new Image();
+    interp_images_FINE_2[i].src = path;
+  }
+}
+
+function setInterpolationImageFine2(i) {
+  var image = interp_images_FINE_2[i];
+  image.ondragstart = function() { return false; };
+  image.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper').empty().append(image);
+}
+
+////
 
 
 $(document).ready(function() {
@@ -65,13 +127,38 @@ $(document).ready(function() {
         player.currentTime = player.duration / 100 * this.value;
       })
     }, false);*/
-    preloadInterpolationImages();
 
-    $('#interpolation-slider').on('input', function(event) {
-      setInterpolationImage(this.value);
+    // preloadInterpolationImages();
+
+    // $('#interpolation-slider').on('input', function(event) {
+    //   setInterpolationImage(this.value);
+    // });
+    // setInterpolationImage(0);
+    // $('#interpolation-slider').prop('max', NUM_INTERP_FRAMES - 1);
+
+    preloadInterpolationImagesFine0();
+
+    $('#interpolation-slider-fine0').on('input', function(event) {
+      setInterpolationImageFine0(this.value);
     });
-    setInterpolationImage(0);
-    $('#interpolation-slider').prop('max', NUM_INTERP_FRAMES - 1);
+    setInterpolationImageFine0(0);
+    $('#interpolation-slider-fine0').prop('max', NUM_INTERP_FRAMES_FINE_0 - 1);
+
+    preloadInterpolationImagesFine1();
+
+    $('#interpolation-slider-fine1').on('input', function(event) {
+      setInterpolationImageFine1(this.value);
+    });
+    setInterpolationImageFine1(0);
+    $('#interpolation-slider-fine1').prop('max', NUM_INTERP_FRAMES_FINE_1 - 1);
+
+    preloadInterpolationImagesFine2();
+
+    $('#interpolation-slider-fine2').on('input', function(event) {
+      setInterpolationImageFine2(this.value);
+    });
+    setInterpolationImageFine2(0);
+    $('#interpolation-slider-fine2').prop('max', NUM_INTERP_FRAMES_FINE_2 - 1);
 
     bulmaSlider.attach();
 

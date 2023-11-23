@@ -59,8 +59,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Morpheus3D: Single-view 3D Object Reconstruction using Multiple Diffusion
-            Priors in Frequency Domain</h1>
+          <h1 class="title is-1 publication-title">Morpheus3D: One Image to High-quality Textured 3D Object Generation using Multiple Diffusion Priors in Frequency Domain</h1>
           <!-- <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
@@ -399,8 +398,7 @@
         </div>
         <!--/ Re-rendering. -->
 
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
+        <!-- <h3 class="title is-4">Ablation of high-passing 2D prior guidance</h3>
         <div class="content has-text-justified">
           <p>
             We can also animate the scene by interpolating the deformation latent codes of two input
@@ -413,7 +411,7 @@
             <img src="./static/images/interpolate_start.jpg"
                  class="interpolation-image"
                  alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
+            <p>Reference</p>
           </div>
           <div class="column interpolation-video-column">
             <div id="interpolation-image-wrapper">
@@ -423,15 +421,104 @@
                    id="interpolation-slider"
                    step="1" min="0" max="100" value="0" type="range">
           </div>
+        </div>
+        <br/>
+        <div class="columns is-vcentered interpolation-panel">
           <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
+            <img src="./static/images/interpolate_start.jpg"
                  class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
+                 alt="Interpolate start reference image."/>
+            <p>Reference</p>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider"
+                   step="1" min="0" max="100" value="0" type="range">
           </div>
         </div>
         <br/>
-        <!--/ Interpolating. -->
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/interpolate_start.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>Reference</p>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider"
+                   step="1" min="0" max="100" value="0" type="range">
+          </div>
+        </div>
+        <br/> -->
+
+        <h3 class="title is-4">Ablation of fine-tuning 2D prior</h3>
+        <div class="content has-text-justified">
+          <p>
+            We can also animate the scene by interpolating the deformation latent codes of two input
+            frames. Use the slider here to linearly interpolate between the left frame and the right
+            frame.
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="./static/ablation/fine-tuning/grapes_0.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>Reference</p>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-fine0"
+                   step="1" min="0" max="100" value="0" type="range">
+          </div>
+        </div>
+        <br/>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="./static/ablation/fine-tuning/grapes_0.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>Reference</p>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-fine1"
+                   step="1" min="0" max="100" value="0" type="range">
+          </div>
+        </div>
+        <br/>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="./static/ablation/fine-tuning/grapes_0.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>Reference</p>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider-fine2"
+                   step="1" min="0" max="100" value="0" type="range">
+          </div>
+        </div>
+        <br/>
+
+        
         
 
         <h2 class="title is-3">Quantitative Results</h2>
