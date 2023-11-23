@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Morpheus3D: Single-view 3D Object Reconstruction using Multiple Diffusion Priors in Frequency Domain.">
+        content="Morpheus3D: One Image to High-quality Textured 3D Object Generation using Multiple Diffusion Priors in Frequency Domain.">
   <!-- <meta name="keywords" content="Nerfies, D-NeRF, NeRF"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Morpheus3D: Single-view 3D Object Reconstruction using Multiple Diffusion Priors in Frequency Domain</title>
+  <title>Morpheus3D: One Image to High-quality Textured 3D Object Generation using Multiple Diffusion Priors in Frequency Domain</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -125,7 +125,7 @@
                   </a>
               </span>
               <span class="link-block">
-                <a class="external-link button is-normal is-rounded is-dark"></a>
+                <a class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
@@ -221,7 +221,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          Single-view 3D object reconstruction is a persistently challenging task due to the extreme lack of information. Recently, diffusion models pre-trained on large-scale datasets served as 2D priors are used to solve the ill-posed task but suffer from color deviation and unrealistic geometry, which can be curbed by using diffusion models fine-tuned with 3D annotated data served as 3D priors. However, 3D priors take the problem of lacking high-frequency details, which cannot be solved by direct complementation with 2D priors in spatial domain for introducing erroneous low-frequency 2D prior guidance. In this paper, we revisit the characteristics of different diffusion priors from the frequency perspective. Based on the observations of priors, we theoretically present a unified framework of hybrid optimization using multiple diffusion priors in frequency domain. Under this framework, we further propose Morpheus3D, a pipeline of 3D object reconstruction from any single unposed image in the wild. Morpheus3D enhances 3D prior with high-pass image-prompt 2D prior guidance to reconstruct high-quality 3D objects with effectively suppressing unrealistic geometry, low-frequency color deviation and high-frequency lacking problems. Both quantitative and qualitative experiments on the public dataset and our collected dataset with complex textures show that our method exhibits significant improvements in reconstruction quality.
+          Single-view 3D reconstruction, also known as image-to-3D, is a persistently challenging task due to the extreme lack of information. Recently, diffusion models pre-trained on large-scale datasets served as 2D priors are used to solve the ill-posed task but suffer from color deviation and view inconsistency, which can be curbed by using diffusion models fine-tuned with 3D annotated data served as 3D priors. However, 3D priors lack high-frequency details, which cannot be solved by direct complementation with 2D priors in spatial domain for introducing erroneous low-frequency 2D prior guidance. In this paper, we revisit the characteristics of different diffusion priors from the frequency perspective. Based on our observations, we theoretically present a unified framework of hybrid optimization using multiple diffusion priors in frequency domain. Under this framework, we further propose Morpheus3D, a pipeline of 3D object generation from any single unposed image in the wild. Morpheus3D enhances 3D prior with high-pass image-prompt 2D prior guidance to reconstruct high-quality 3D objects while effectively suppressing view inconsistency, low-frequency color deviation, and high-frequency lacking problems. Both quantitative and qualitative experiments on the public and our collected datasets with complex textures show that our method exhibits significant improvements in generation quality.
         </div>
       </div>
     </div>
@@ -336,8 +336,7 @@
         <h3 class="title is-4">Re-rendering the input video</h3>
         <div class="content has-text-justified">
           <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
+            Comparison with other methods.
           </p>
         </div>
         <div class="content has-text-centered">
@@ -346,8 +345,89 @@
                  muted
                  preload
                  playsinline
-                 width="75%">
+                 width="90%">
             <source src="./static/videos/grapes_0.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="90%">
+            <source src="./static/videos/bird_1.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="90%">
+            <source src="./static/videos/teddy_0.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="90%">
+            <source src="./static/videos/cat_statue.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="90%">
+            <source src="./static/videos/fish_real_nemo.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="90%">
+            <source src="./static/videos/bird_3.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="90%">
+            <source src="./static/videos/frog_0.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="90%">
+            <source src="./static/videos/statue_2.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="90%">
+            <source src="./static/videos/statue_3.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="90%">
+            <source src="./static/videos/stone_dragon_statue.mp4"
                     type="video/mp4">
           </video>
         </div>
