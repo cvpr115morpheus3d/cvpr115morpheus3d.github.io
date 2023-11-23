@@ -38,7 +38,7 @@ function setInterpolationImageFine0(i) {
   var image = interp_images_FINE_0[i];
   image.ondragstart = function() { return false; };
   image.oncontextmenu = function() { return false; };
-  $('#interpolation-image-wrapper').empty().append(image);
+  $('#interpolation-image-wrapper-fine0').empty().append(image);
 }
 
 var INTERP_BASE_FINE_1 = "./static/ablation/fine-tuning/grapes_0";
@@ -57,7 +57,7 @@ function setInterpolationImageFine1(i) {
   var image = interp_images_FINE_1[i];
   image.ondragstart = function() { return false; };
   image.oncontextmenu = function() { return false; };
-  $('#interpolation-image-wrapper').empty().append(image);
+  $('#interpolation-image-wrapper-fine1').empty().append(image);
 }
 
 var INTERP_BASE_FINE_2 = "./static/ablation/fine-tuning/grapes_0";
@@ -76,7 +76,7 @@ function setInterpolationImageFine2(i) {
   var image = interp_images_FINE_2[i];
   image.ondragstart = function() { return false; };
   image.oncontextmenu = function() { return false; };
-  $('#interpolation-image-wrapper').empty().append(image);
+  $('#interpolation-image-wrapper-fine2').empty().append(image);
 }
 
 ////
