@@ -1,3 +1,3 @@
-# Morpheus
+# Morpheus3D
 
-This is the repository that contains source code for the [Morpheus website](https://Morpheus-3D.github.io).
+This is the repository for the [Morpheus3D website](https://cvpr115morpheus3d.github.io/).

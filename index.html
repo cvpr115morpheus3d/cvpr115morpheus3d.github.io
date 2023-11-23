@@ -87,6 +87,10 @@
             <span class="author-block"><sup>2</sup>Google Research</span>
           </div> -->
 
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Anonymous</span>
+          </div>
+
           <div class="column has-text-centered">
             <!-- <div class="publication-links">
               <span class="link-block">
@@ -255,9 +259,7 @@
 <section class="section">
   <div class="container is-max-desktop">
 
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
+    <!-- <div class="columns is-centered">
       <div class="column">
         <div class="content">
           <h2 class="title is-3">Visual Effects</h2>
@@ -271,9 +273,6 @@
           </video>
         </div>
       </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
       <div class="column">
         <h2 class="title is-3">Matting</h2>
         <div class="columns is-centered">
@@ -290,13 +289,113 @@
 
         </div>
       </div>
-    </div>
-    <!--/ Matting. -->
+    </div> -->
 
     <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
+        <h2 class="title is-3">Qualitive Results</h2>
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">Comparison with other methods</h3>
+        <div class="content has-text-justified">
+          <p>
+            Morpheus3D can generate photo-realistic 3D objects from any single unposed image. We compare the generated results of Morpheus3D with other competitive methods (RealFusion, Magic123).
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="100%">
+            <source src="./static/videos/grapes_0.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="100%">
+            <source src="./static/videos/bird_1.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="100%">
+            <source src="./static/videos/teddy_0.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="100%">
+            <source src="./static/videos/cat_statue.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="100%">
+            <source src="./static/videos/fish_real_nemo.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="100%">
+            <source src="./static/videos/bird_3.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="100%">
+            <source src="./static/videos/frog_0.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="100%">
+            <source src="./static/videos/statue_2.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="100%">
+            <source src="./static/videos/statue_3.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="100%">
+            <source src="./static/videos/stone_dragon_statue.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <!--/ Re-rendering. -->
 
         <!-- Interpolating. -->
         <h3 class="title is-4">Interpolating states</h3>
@@ -331,107 +430,6 @@
         </div>
         <br/>
         <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Comparison with other methods.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="90%">
-            <source src="./static/videos/grapes_0.mp4"
-                    type="video/mp4">
-          </video>
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="90%">
-            <source src="./static/videos/bird_1.mp4"
-                    type="video/mp4">
-          </video>
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="90%">
-            <source src="./static/videos/teddy_0.mp4"
-                    type="video/mp4">
-          </video>
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="90%">
-            <source src="./static/videos/cat_statue.mp4"
-                    type="video/mp4">
-          </video>
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="90%">
-            <source src="./static/videos/fish_real_nemo.mp4"
-                    type="video/mp4">
-          </video>
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="90%">
-            <source src="./static/videos/bird_3.mp4"
-                    type="video/mp4">
-          </video>
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="90%">
-            <source src="./static/videos/frog_0.mp4"
-                    type="video/mp4">
-          </video>
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="90%">
-            <source src="./static/videos/statue_2.mp4"
-                    type="video/mp4">
-          </video>
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="90%">
-            <source src="./static/videos/statue_3.mp4"
-                    type="video/mp4">
-          </video>
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="90%">
-            <source src="./static/videos/stone_dragon_statue.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
 
       </div>
     </div>
