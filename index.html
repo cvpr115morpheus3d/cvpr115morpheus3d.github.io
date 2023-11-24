@@ -401,7 +401,7 @@
         <h3 class="title is-4">Ablation of high-passing 2D prior guidance</h3>
         <div class="content has-text-justified">
           <p>
-            Using full-pass 2D prior guidance in spatial domain without high-passing shows heavier color deviation, which indicates the significance of optimization in frequency domain.
+            Using full-pass 2D prior guidance in spatial domain without high-passing shows heavier color deviation, which indicates the significance of optimization in frequency domain. <b>Note: The color deviation is concentrated on the back and side views.</b>
           </p>
         </div>
         <div class="columns is-vcentered interpolation-panel">
@@ -417,7 +417,7 @@
             </div>
             <input class="slider is-fullwidth is-large is-info"
                    id="interpolation-slider-high0"
-                   step="1" min="0" max="100" value="0" type="range">
+                   step="50" min="0" max="100" value="0" type="range">
           </div>
         </div>
         <br/>
@@ -459,7 +459,7 @@
         <h3 class="title is-4">Ablation of fine-tuning 2D prior</h3>
         <div class="content has-text-justified">
           <p>
-            Boosting high-frequency details using high-pass 2D prior guidance with fine-tuning 2D prior.
+            Boosting high-frequency details using high-pass 2D prior guidance with fine-tuning 2D prior. <b>Note: The high-frequency lacking is concentrated on the back and side views.</b>
           </p>
         </div>
         <div class="columns is-vcentered interpolation-panel">
