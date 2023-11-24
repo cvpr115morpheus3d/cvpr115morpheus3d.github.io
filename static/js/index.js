@@ -202,7 +202,7 @@ $(document).ready(function() {
     $('#interpolation-slider-high0').on('input', function(event) {
       setInterpolationImageHigh0(this.value);
     });
-    setInterpolationImageHigh0(0);
+    setInterpolationImageHigh0(NUM_INTERP_FRAMES_HIGH_0/2);
     $('#interpolation-slider-high0').prop('max', NUM_INTERP_FRAMES_HIGH_0 - 1);
 
     preloadInterpolationImagesHigh1();
@@ -210,7 +210,7 @@ $(document).ready(function() {
     $('#interpolation-slider-high1').on('input', function(event) {
       setInterpolationImageHigh1(this.value);
     });
-    setInterpolationImageHigh1(0);
+    setInterpolationImageHigh1(NUM_INTERP_FRAMES_HIGH_1/2);
     $('#interpolation-slider-high1').prop('max', NUM_INTERP_FRAMES_HIGH_1 - 1);
 
     preloadInterpolationImagesHigh2();
@@ -218,7 +218,7 @@ $(document).ready(function() {
     $('#interpolation-slider-high2').on('input', function(event) {
       setInterpolationImageHigh2(this.value);
     });
-    setInterpolationImageHigh2(0);
+    setInterpolationImageHigh2(NUM_INTERP_FRAMES_HIGH_2/2);
     $('#interpolation-slider-high2').prop('max', NUM_INTERP_FRAMES_HIGH_2 - 1);
 
     preloadInterpolationImagesFine0();
@@ -226,7 +226,7 @@ $(document).ready(function() {
     $('#interpolation-slider-fine0').on('input', function(event) {
       setInterpolationImageFine0(this.value);
     });
-    setInterpolationImageFine0(0);
+    setInterpolationImageFine0(NUM_INTERP_FRAMES_FINE_0/2);
     $('#interpolation-slider-fine0').prop('max', NUM_INTERP_FRAMES_FINE_0 - 1);
 
     preloadInterpolationImagesFine1();
@@ -234,7 +234,7 @@ $(document).ready(function() {
     $('#interpolation-slider-fine1').on('input', function(event) {
       setInterpolationImageFine1(this.value);
     });
-    setInterpolationImageFine1(0);
+    setInterpolationImageFine1(NUM_INTERP_FRAMES_FINE_1/2);
     $('#interpolation-slider-fine1').prop('max', NUM_INTERP_FRAMES_FINE_1 - 1);
 
     preloadInterpolationImagesFine2();
@@ -242,7 +242,7 @@ $(document).ready(function() {
     $('#interpolation-slider-fine2').on('input', function(event) {
       setInterpolationImageFine2(this.value);
     });
-    setInterpolationImageFine2(0);
+    setInterpolationImageFine2(NUM_INTERP_FRAMES_FINE_2/2);
     $('#interpolation-slider-fine2').prop('max', NUM_INTERP_FRAMES_FINE_2 - 1);
 
     bulmaSlider.attach();
